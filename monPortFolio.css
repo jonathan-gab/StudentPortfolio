@@ -1,0 +1,591 @@
+/* Réinitialisation des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fond de la page */
+body {
+    font-family: monospace;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    color: white;
+    padding-top: 2%;
+}
+
+/* Classe utilitaire pour débogage */
+.br {
+    outline: 2px solid red;
+}
+
+/* Conteneur de la barre de navigation */
+.navContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Modifie pour rendre la navbar sticky */
+    top: 0; /* Collée en haut de la page */
+    z-index: 1000; /* Assure que la navbar soit au-dessus de l'image de fond */
+}
+
+/* Style pour le nav */
+nav {
+    width: 100%;
+    padding: 10px;
+    backdrop-filter: blur(8px);
+    background-color: #0000004d; /* Transparence pour voir l'image de fond en dessous */
+    position: fixed; /* Rend la navbar sticky */
+    top: 0; /* Garde la navbar collée en haut même lors du défilement */
+    z-index: 1000;
+}
+
+
+/* Style du titre */
+.navTitle {
+    color: white;
+    font-size: 24px; /* Taille du texte ajustée */
+}
+
+/* Conteneur des liens de navigation */
+.navList {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; /* Espacement entre les liens */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* Conteneur du titre dans l'image de fond */
+.chiefBackgroundTitle {
+    position: absolute;
+    top: 50%; /* Place le titre verticalement au milieu */
+    left: 50%; /* Place le titre horizontalement au milieu */
+    transform: translate(-50%, -50%); /* Centre le titre parfaitement */
+    color: white; /* Couleur blanche pour le texte */
+    font-size: 3em; /* Ajuste la taille du texte */
+    z-index: 2; /* Assure que le titre soit au-dessus du filtre */
+    text-align: center; /* Centre le texte */
+}
+
+/* Image de fond (chiefBackground) */
+.chiefBackground {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.scrollIcon {
+    position: absolute;
+    bottom: 20px; /* Ajustez la valeur pour placer l'icône plus ou moins haut */
+    left: 50%;
+    font-size: 2rem; /* Ajustez la taille de l'icône selon vos préférences */
+    color: white;
+    z-index: 2;
+}
+
+.playMusicLogo{
+    cursor: pointer;
+}
+
+video {
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
+}
+
+
+/* Filtre noir transparent */
+.chiefBackground::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.34); /* Filtre noir avec transparence */
+    z-index: 1; /* Place le filtre sous le titre */
+}
+
+
+
+
+/* Style des boutons de navigation */
+.navBt {
+    color: white;
+    margin: 0; /* Supprime les marges des boutons */
+    font-size: 18px; /* Taille du texte */
+    padding: 10px; /* Espacement autour des liens */
+    transition: color 0.3s ease-in-out;
+}
+
+
+.navBt:hover{
+     color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #fff,
+    0 0 82px #fff,
+    0 0 92px #fff,
+    0 0 102px #fff,
+    0 0 151px #fff;
+}
+
+
+/* Style des liens */
+a {
+    color: white; /* Couleur blanche par défaut */
+    text-decoration: none; /* Supprime le soulignement */
+    transition: color 0.3s ease-in-out; /* Animation pour changement de couleur */
+}
+
+a:hover {
+    color: lightgray; /* Change la couleur au survol */
+}
+
+.chiefContainer{
+    padding-top: 5%;
+    align-items: center; /* Aligne verticalement l'image et la description */
+    justify-content: center; /* Centre le tout horizontalement */
+
+}
+
+.myDescriptionContainer {
+    display: flex;
+}
+
+.myImgContenair {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Ajoutez un fond transparent si besoin */
+}
+
+.myImg {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+.myImg:hover {
+    box-shadow: 0 0 15px 5px rgb(255, 255, 255); /* Utilisez box-shadow pour un effet plus net */
+}
+
+.myDescription{
+    width: 75%;
+    text-align: left;
+    margin: auto;
+}
+
+.imgTransitionOne {
+    position: relative; /* Nécessaire pour positionner le pseudo-élément correctement */
+    background-image: url(img/imgTransitionOne.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 5%;
+    margin-top: 5%;
+}
+
+/* Pseudo-élément pour le filtre */
+.imgTransitionOne::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Un filtre noir avec une transparence de 50% */
+    z-index: 1; /* Assure que le filtre soit au-dessus de l'image */
+}
+
+
+.imgTransitionTwo {
+    position: relative; /* Nécessaire pour positionner le pseudo-élément correctement */
+    background-image: url(img/imgTransitionTwo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 5%;
+    margin-top: 5%;
+}
+
+.imgTransitionThree {
+    position: relative;
+    background-image: url(img/imgTransitionThree.jpg);
+    background-position: center 65%; /* Change la valeur verticale pour ajuster la partie visible */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 5%;
+    margin-top: 5%;
+}
+
+/* Pseudo-élément pour le filtre */
+.imgTransitionTwo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Un filtre noir avec une transparence de 50% */
+    z-index: 1; /* Assure que le filtre soit au-dessus de l'image */
+}
+
+
+.xpTitleContainer {
+    position: relative; /* Nécessaire pour le positionnement du titre */
+    z-index: 2; /* Assure que le titre est au-dessus du filtre */
+    text-align: center; /* Centrer le texte */
+    color: white; /* Assure que le texte est visible */
+    margin-top: 20px; /* Ajuste la marge pour la position */
+}
+
+.xpTitle{
+    text-align: center;
+}
+
+
+.containerXp {
+    display: flex; /* Utiliser flexbox pour aligner les éléments */
+    padding-top: 5%;
+}
+
+
+
+.textXpOne {
+    display: flex;
+    flex-direction: column; /* Aligne le titre et le texte verticalement */
+    justify-content: flex-start; /* Aligner le contenu en haut */
+    width: 50%; /* Largeur du texte */
+    padding-left: 20px; /* Optionnel : ajouter un peu d'espace entre l'image et le texte */
+    margin: auto;
+}
+
+.textXpOne h1 {
+    margin-bottom: 10px; /* Ajouter de l'espace entre le titre et le texte */
+    text-align: center;
+}
+
+
+
+
+.containerXpTwo {
+    display: flex; /* Utiliser flexbox pour aligner les éléments */
+    padding-top: 3%;
+}
+
+
+
+.textXpTwo {
+    display: flex;
+    flex-direction: column; /* Aligne le titre et le texte verticalement */
+    justify-content: flex-start; /* Aligner le contenu en haut */
+    width: 50%; /* Largeur du texte */
+    padding-left: 20px; /* Ajouter un espace entre le texte et l'image */
+    margin: auto;
+}
+
+.textXpTwo h1 {
+    margin-bottom: 10px; /* Ajouter de l'espace entre le titre et le texte */
+    text-align: center;
+}
+
+.imgXpOne, .imgXpTwo {
+    width: 580px; /* Largeur fixe */
+    height: 300px; /* Hauteur fixe */
+    object-fit: cover; /* S'assure que l'image s'adapte bien */
+}
+
+.cursusContainer {
+    margin: auto;
+    margin-top: 4%;
+    width: 50%;
+}
+
+.cursus {
+    display: flex; /* Aligne l'image et le texte côte à côte */
+    align-items: center; /* Centre verticalement l'image et le texte */
+    gap: 20px; /* Ajoute de l'espace entre l'image et le texte */
+}
+
+.cursusImgOne {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Rend l'image circulaire */
+    object-fit: cover; /* Assure un bon ajustement de l'image */
+    transition: transform 0.5s ease-in-out; /* Assure une transition douce */
+}
+
+.cursusImgOne:hover {
+    transform: rotate(360deg); /* Fait tourner l'image de 360 degrés */
+}
+
+.CursusTextOne {
+    flex: 1; /* Le texte prend l'espace restant */
+    text-align: justify; /* Justifie le texte pour un rendu plus propre */
+}
+
+.contact {
+    padding-top: 4%;
+    display: flex;
+    width: 100%; /* Assure que le conteneur occupe toute la largeur */
+}
+
+.titleContact{
+    color: white;
+    text-align: center;
+    padding-bottom: 8%;
+    font-size:40px;
+
+}
+
+.iconContainer{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.instaLogo{
+    font-size: 250%;
+    padding: 2%;
+}
+
+
+.instaLogo:hover{
+    font-size: 250%;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #fff,
+      0 0 82px #fff,
+      0 0 92px #fff,
+      0 0 102px #fff,
+      0 0 151px #fff;
+}
+
+
+
+.xLogo{
+    font-size: 250%;
+    padding: 2%;
+
+}
+
+.xLogo:hover{
+    font-size: 250%;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #fff,
+      0 0 82px #fff,
+      0 0 92px #fff,
+      0 0 102px #fff,
+      0 0 151px #fff;
+}
+
+.gitHub{
+    font-size: 250%;
+    padding: 2%;
+
+}
+.gitHub:hover{
+    font-size: 250%;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #fff,
+      0 0 82px #fff,
+      0 0 92px #fff,
+      0 0 102px #fff,
+      0 0 151px #fff;
+}
+
+
+
+
+.linkDin{
+    font-size: 250%;
+    padding: 2%;
+
+}
+
+.linkDin:hover{
+    font-size: 250%;
+    color: #fff;
+    text-shadow:
+    
+      0 0 21px #fff,
+      0 0 42px #fff,
+      0 0 82px #fff,
+      0 0 92px #fff,
+      0 0 102px #fff,
+      0 0 151px #fff;
+}
+
+input{
+    border-radius: 10px;
+    padding: 5px; /* Augmente le padding pour rendre le champ plus grand */
+    background-color: transparent;
+    border-color: white;
+    padding: 2%;
+    color: white;
+}
+
+input:hover{
+    box-shadow: 0 0 10px 2px rgb(255, 255, 255); /* Utilisez box-shadow pour un effet plus net */
+
+}
+
+
+
+.form {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center; /* Centre les inputs horizontalement */
+    gap: 10px; /* Espace entre les éléments */
+    flex-wrap: wrap; /* Permet de passer à la ligne suivante si l'espace est insuffisant */
+
+}
+
+
+.textareaContact {
+    width: 100%; /* Prend toute la largeur du conteneur */
+    margin-top: 10px; /* Espacement avec les inputs */
+    padding: 15px; /* Augmente le padding pour rendre le champ plus grand */
+    height: 200px; /* Ajuste la hauteur du textarea */
+    resize: vertical; /* Permet à l'utilisateur de redimensionner le textarea en hauteur */
+    border-radius: 10px;
+    background-color: transparent;
+    border-color: white;
+    color:white;
+
+}
+
+
+
+
+.textareaContact:hover{
+    box-shadow: 0 0 18px 2px rgb(255, 255, 255); /* Utilisez box-shadow pour un effet plus net */
+
+
+}
+
+.imgForMap {
+    flex: 1; /* Prend 50% de l'espace */
+}
+
+.map {
+    width: 100%; /* Assure que l'image prend toute la largeur de son conteneur */
+    height: auto; /* Conserve le ratio d'aspect de l'image */
+}
+
+.formContainer {
+    flex: 1; /* Prend 50% de l'espace */
+}
+
+.formContainer2{
+
+
+}
+
+.send {
+    margin-top: 10px; /* Espacement avec les inputs */
+    padding: 2%;
+    border: 2px solid #000; /* Définie une bordure de 2px de couleur noire */
+    border-radius: 10px; /* Arrondi des coins */
+    width: 40%;
+    background-color: transparent; /* Aucune couleur de fond */
+    color: white;
+    border-color: white;
+    font-size: 100%;
+}
+
+.send:hover {
+    background-color: white;
+    color: black;
+}
+
+
+@media (max-width: 768px) {
+    /* Navigation */
+    .navList {
+        display: block;
+        text-align: center;
+    }
+
+    /* Section principale (chiefBackground) */
+    .chiefBackgroundTitle {
+        font-size: 2.5rem;
+    }
+
+    /* Section expérience */
+    .containerXp, .containerXpTwo, .cursus {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .containerXp img, .containerXpTwo img, .cursusImgOne {
+        max-width: 80%;
+    }
+
+    .textXpOne, .textXpTwo {
+        margin-left: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .formContainer {
+        margin-top: 20px;
+    }
+
+    .form input, .form textarea {
+        max-width: 90%;
+    }
+
+    .send {
+        width: 100%;
+    }
+
+    /* Icones sociaux */
+    .iconContainer i {
+        font-size: 2.5rem;
+    }
+}
