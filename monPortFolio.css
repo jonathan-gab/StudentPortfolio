@@ -706,7 +706,7 @@ input:hover{
 
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
     /* Burger Menu */
    
 
@@ -734,16 +734,12 @@ input:hover{
         text-align: left; /* Aligne le texte à gauche */
     }
 
-    .imgXpOne, .imgXpTwo {
-        width: 50%; /* Les images prennent la moitié de la largeur de l'écran */
-        height: 250px;
-        margin-right: 20px; /* Ajoute un espace à droite des images */
+    .imgXpOne, .imgXpTwo, .textXpOne, .textXpTwo {
+        width: 50%; /* Chaque élément occupe 50% de la largeur */
+        display: inline-block; /* Aligne les éléments côte à côte */
+        box-sizing: border-box; /* Assurez-vous que la largeur inclut les bordures et le padding */
     }
 
-    .textXpOne, .textXpTwo {
-        margin-top: 0; /* Pas de marge au-dessus du texte */
-        width: 45%; /* Le texte prend la majorité de la place restante */
-    }
 
     /* Assurer que l'image dans .containerXpTwo est au-dessus du texte sur les petits écrans */
     .containerXpTwo img {
