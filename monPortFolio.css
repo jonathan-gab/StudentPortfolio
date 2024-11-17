@@ -706,7 +706,7 @@ input:hover{
 
 }
 
-@media (min-width: 1024px) and (max-width: 1280px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
     /* Burger Menu */
    
 
@@ -724,7 +724,6 @@ input:hover{
 
     .myDescription {
         margin-left: 20px; /* Ajoute un espace à gauche du texte */
-        margin-top: 0; /* Retire le margin-top pour mieux l'aligner avec l'image */
     }
 
     /* Conteneurs avec les images et le texte */
@@ -734,11 +733,40 @@ input:hover{
         text-align: left; /* Aligne le texte à gauche */
     }
 
-    .imgXpOne, .imgXpTwo, .textXpOne, .textXpTwo {
-        width: 50%; /* Chaque élément occupe 50% de la largeur */
-        display: inline-block; /* Aligne les éléments côte à côte */
-        box-sizing: border-box; /* Assurez-vous que la largeur inclut les bordures et le padding */
+
+    .imgXpOne{
+        width: 50%; /* Les images prennent presque la moitié de la largeur de l'écran, laissant un petit espace */
     }
+
+    .nasaImgcss{
+        width: 95%;
+    }
+
+    .lokiCss{
+        width: 100%!important;
+    }
+
+    .imgXpTwo {
+    width: 48%; /* Les images prennent presque la moitié de la largeur de l'écran, laissant un petit espace */
+    height: 250px;
+    margin-bottom: 20px; /* Ajoute un espace en bas pour espacer les éléments si nécessaire */
+
+}
+
+.textXpOne{
+    width: 48%; /* Le texte prend presque la moitié de l'espace restant */
+    margin: auto;
+
+}
+
+.textXpOneTablette{
+    width:650%;
+    margin-right: 50px
+}
+
+.textXpTwo {
+    width: 48%; /* Le texte prend presque la moitié de l'espace restant */
+}
 
 
     /* Assurer que l'image dans .containerXpTwo est au-dessus du texte sur les petits écrans */
