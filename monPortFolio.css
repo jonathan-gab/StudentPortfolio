@@ -543,49 +543,244 @@ input:hover{
     color: black;
 }
 
+/* Style pour le menu burger */
+.burger {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #333;
+}
 
-@media (max-width: 768px) {
-    /* Navigation */
-    .navList {
+
+.menu-toggle {
+    display: none;
+}
+
+.burger {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+
+/* Styles par défaut */
+.menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.menu a {
+    color: #ffffff; /* ou une couleur qui correspond à votre design */
+    text-decoration: none;
+    display: block;
+}
+
+/* Styles pour mobile */
+.menu-toggle {
+    display: none;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Affichage du menu burger en mode mobile */
+@media (max-width: 768px) and (max-width: 1024px) {
+    .burger {
         display: block;
-        text-align: center;
     }
-
-    /* Section principale (chiefBackground) */
-    .chiefBackgroundTitle {
-        font-size: 2.5rem;
-    }
-
-    /* Section expérience */
-    .containerXp, .containerXpTwo, .cursus {
+    
+    .menu {
+        display: none;
         flex-direction: column;
-        align-items: center;
+        background-color: #333;
     }
 
-    .containerXp img, .containerXpTwo img, .cursusImgOne {
-        max-width: 80%;
+    .menu li {
+        padding: 10px 0;
+    }
+
+    .menu a {
+        color: #fff;
+    }
+
+    .menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+        
+    }
+    
+
+    .navList {
+    display: none;
+    flex-direction: column;
+    backdrop-filter: blur(8px);
+    background-color: #0000004d;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border-radius: 8%;
+    padding: 10px;
+    }
+
+    
+    .navList.show {
+        display: flex;
+    }
+    .navBt {
+        margin: 10px 0;
+    }
+    
+    .myDescriptionContainer {
+        flex-direction: column; /* Passe la disposition en colonne */
+        align-items: center; /* Centre les éléments horizontalement */
+        text-align: center; /* Centre le texte */
+    }
+
+    .myImgContenair {
+        width: 150px; /* Ajustez la taille de l'image pour mobile */
+        height: 150px;
+    }
+
+    .myDescription {
+        margin-top: 15px; /* Ajoute un espace au-dessus du texte */
+    }
+
+
+    .containerXp, .containerXpTwo {
+        flex-direction: column; /* Change l'orientation des éléments pour une disposition en colonne */
+        align-items: center; /* Centre les éléments horizontalement */
+        text-align: center; /* Centre le texte */
+    }
+
+    .imgXpOne, .imgXpTwo {
+        width: 80%; /* Ajuste la taille des images sur mobile */
+        height: 150px;
+        margin-bottom: 15px; /* Ajoute un espace entre l'image et le texte */
+    }
+
+    /* Assure que l'image dans .containerXpTwo est au-dessus du texte */
+    .containerXpTwo img {
+        order: -1; /* Force l'image à apparaître avant le texte */
     }
 
     .textXpOne, .textXpTwo {
-        margin-left: 0;
-        text-align: center;
-        max-width: 100%;
+        margin-top: 15px; /* Ajoute un espace au-dessus du texte */
+        width: 80%; /* Le texte prend maintenant 80% de la largeur */
+
     }
 
-    .formContainer {
-        margin-top: 20px;
-    }
+/* CURSUS */
 
-    .form input, .form textarea {
-        max-width: 90%;
-    }
-
-    .send {
-        width: 100%;
-    }
-
-    /* Icones sociaux */
-    .iconContainer i {
-        font-size: 2.5rem;
-    }
+    
+.cursus {
+    flex-direction: column; /* Les éléments passent en colonne (image au-dessus du texte) */
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments */
 }
+
+.cursusImgOne {
+    margin-bottom: 20px; /* Ajoute un espace entre l'image et le texte */
+    order: -1;
+}
+
+.CursusTextOne {
+    width: 150%; /* Le texte prend aussi 80% de la largeur */
+}
+
+.imgForMap {
+    display: none; /* Masque l'élément contenant l'image */
+}
+
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    /* Burger Menu */
+   
+
+    /* Ajustement de la disposition pour les sections avec les images et le texte */
+    .myDescriptionContainer {
+        flex-direction: row; /* Disposition en ligne (image à gauche et texte à droite) */
+        align-items: center; /* Aligne horizontalement les éléments */
+        text-align: left; /* Aligne le texte à gauche */
+    }
+
+    .myImgContenair {
+        width: 250px; /* Ajuste la taille de l'image pour un écran plus grand */
+        height: 250px;
+    }
+
+    .myDescription {
+        margin-left: 20px; /* Ajoute un espace à gauche du texte */
+        margin-top: 0; /* Retire le margin-top pour mieux l'aligner avec l'image */
+    }
+
+    /* Conteneurs avec les images et le texte */
+    .containerXp, .containerXpTwo {
+        flex-direction: row; /* Disposition en ligne */
+        align-items: center; /* Aligne horizontalement */
+        text-align: left; /* Aligne le texte à gauche */
+    }
+
+    .imgXpOne, .imgXpTwo {
+        width: 50%; /* Les images prennent la moitié de la largeur de l'écran */
+        height: 250px;
+        margin-right: 20px; /* Ajoute un espace à droite des images */
+    }
+
+    .textXpOne, .textXpTwo {
+        margin-top: 0; /* Pas de marge au-dessus du texte */
+        width: 45%; /* Le texte prend la majorité de la place restante */
+    }
+
+    /* Assurer que l'image dans .containerXpTwo est au-dessus du texte sur les petits écrans */
+    .containerXpTwo img {
+        order: 0; /* Image à gauche, texte à droite */
+    }
+
+    /* CURSUS (pour les blocs cursus) */
+    .cursus {
+        flex-direction: row; /* Disposition en ligne (image à gauche et texte à droite) */
+        align-items: center; /* Aligne horizontalement */
+        justify-content: flex-start; /* Place les éléments au début */
+    }
+
+    .cursusImgOne {
+        margin-right: 20px; /* Ajoute un espace entre l'image et le texte */
+        order: 0; /* L'image est à gauche */
+    }
+
+    .CursusTextOne {
+        width: 60%; /* Le texte prend 60% de la largeur, l'image 40% */
+    }
+
+    /* Carte (Map) */
+    .imgForMap {
+        background-image: url('img/mapMobile.jpg'); /* Remplace l'image pour les mobiles */
+    }
+
+
+
+
+}
+
+
+
+
+
+    
+
+
+
