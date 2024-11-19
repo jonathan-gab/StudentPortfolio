@@ -356,6 +356,34 @@ a:hover {
     text-align: justify; /* Justifie le texte pour un rendu plus propre */
 }
 
+.nasaImgcss {
+    transition: transform 0.5s ease-in-out;
+}
+
+.nasaImgcss:active {
+    transform: translateX(100px); /* Déplace l'image de 100px vers la droite */
+}
+
+.imgXpTwo{
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.imgXpTwo:active {
+    transform: translateX(-100px); /* Déplace l'image de 100px vers la droite */
+}
+
+.lokiCss{
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.lokiCss:active {
+    transform: translateX(100px); /* Déplace l'image de 100px vers la droite */
+}
+
+
+
 .contact {
     padding-top: 4%;
     display: flex;
@@ -473,6 +501,10 @@ input:hover{
 
 }
 
+input:focus {
+    border-color: rgb(0, 176, 255); /* Change la couleur de la bordure au focus */
+    box-shadow: 0 0 15px 3px rgba(0, 176, 255, 0.7); /* Effet lumineux subtil */
+}
 
 
 .form {
@@ -508,6 +540,10 @@ input:hover{
 
 }
 
+.textareaContact:focus{
+    box-shadow: 0 0 15px 3px rgba(0, 176, 255, 0.7); /* Effet lumineux subtil */
+}
+
 .imgForMap {
     flex: 1; /* Prend 50% de l'espace */
 }
@@ -527,21 +563,37 @@ input:hover{
 }
 
 .send {
-    margin-top: 10px; /* Espacement avec les inputs */
+    margin-top: 10px;
     padding: 2%;
-    border: 2px solid #000; /* Définie une bordure de 2px de couleur noire */
-    border-radius: 10px; /* Arrondi des coins */
+    border: 2px solid #000;
+    border-radius: 10px;
     width: 40%;
-    background-color: transparent; /* Aucune couleur de fond */
+    background-color: transparent;
     color: white;
     border-color: white;
     font-size: 100%;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .send:hover {
     background-color: white;
     color: black;
 }
+
+/* Animation au clic avec :active */
+.send:active {
+    transform: scale(1.1); /* Gonfler le bouton lorsqu'on clique */
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.8); /* Légère ombre pour l'effet */
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Plus rapide pour l'effet de clic */
+}
+
+/* Focus si nécessaire (toujours visible même après le clic) */
+.send:focus {
+    outline: none;
+}
+
 
 /* Style pour le menu burger */
 .burger {
