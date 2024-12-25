@@ -75,6 +75,12 @@ nav {
     font-size: 3em; /* Ajuste la taille du texte */
     z-index: 2; /* Assure que le titre soit au-dessus du filtre */
     text-align: center; /* Centre le texte */
+
+    text-shadow:
+    0 0 7px #ffffff,
+    0 0 92px #fff,
+    0 0 102px #fff,
+    0 0 151px #fff;
 }
 
 /* Image de fond (chiefBackground) */
@@ -145,7 +151,7 @@ video {
 .navBt:hover{
      color: #fff;
   text-shadow:
-    0 0 7px #fff,
+    0 0 7px #ffffff,
     0 0 10px #fff,
     0 0 21px #fff,
     0 0 42px #fff,
