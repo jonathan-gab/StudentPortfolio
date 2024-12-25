@@ -45,6 +45,10 @@ nav {
     z-index: 1000;
 }
 
+.titleWebsite{
+    padding-left: 30px;
+}
+
 
 /* Style du titre */
 .navTitle {
