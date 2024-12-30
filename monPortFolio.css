@@ -49,6 +49,15 @@ nav {
     padding-left: 30px;
 }
 
+p{
+    font-size: 20px;
+    text-align: justify;
+    hyphens: auto; /* Active la césure automatique */
+    word-spacing: 3px;   /* Augmente l'espace entre les mots */
+    line-height: 1.8;    /* Augmente l'interlignage */
+
+
+}
 
 /* Style du titre */
 .navTitle {
@@ -197,8 +206,8 @@ a:hover {
 }
 
 .myImg {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     transition: box-shadow 0.3s ease-in-out;
     border-radius: 50%;
@@ -212,6 +221,200 @@ a:hover {
     width: 75%;
     text-align: left;
     margin: auto;
+}
+
+
+.TitleSection{
+    font-size: 45px;
+    text-shadow:
+    0 0 7px #fff,
+ 
+    0 0 21px #fff,
+  
+   
+    0 0 151px #fff;
+    
+}
+
+
+
+
+.imgTransitionZero {
+    position: relative; /* Nécessaire pour positionner le pseudo-élément correctement */
+    background-image: url(img/CompetencesImg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 5%;
+    margin-top: 5%;
+}
+
+.imgTransitionZero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Un filtre noir avec une transparence de 50% */
+    z-index: 1; /* Assure que le filtre soit au-dessus de l'image */
+}
+
+.imgTransitionProjets {
+    position: relative; /* Nécessaire pour positionner le pseudo-élément correctement */
+    background-image: url(./img/PortfolioImg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10% 12%; /* Ajustez cette valeur pour afficher une autre partie de l'image */
+    width: 100%;
+    padding: 5%;
+    margin-top: 5%;
+}
+
+
+.imgTransitionProjets::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Un filtre noir avec une transparence de 50% */
+    z-index: 1; /* Assure que le filtre soit au-dessus de l'image */
+}
+
+
+
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 50px;
+    margin-bottom: 0px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    color: black;
+}
+
+.card-subtitle {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.modal-description {
+    font-size: 16px;
+    color: #666;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Carousel */
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: black;
+}
+
+.carousel {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+
+.carousel img {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    border-radius: 8px;
+    margin: 60px;
+    margin-top: 60px;
+    margin-bottom: 0px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 .imgTransitionOne {
