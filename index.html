@@ -472,6 +472,8 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
                         </div>
                     </div>
                 </div>
+
+
             </div>
     </main>
     <script>
@@ -628,9 +630,41 @@ app.listen(PORT, () => {
     console.log(`Serveur en cours d'exécution sur le port ${PORT}`);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+        // Vérifiez régulièrement si l'icône WhatsApp est disponible
+        const checkWhatsAppIcon = setInterval(() => {
+            const whatsappIcon = document.querySelector(".elfsight-app-514af7ee-7388-4eb1-98ca-dec5cf5c476c");
+
+            if (whatsappIcon) {
+                // Stoppe la vérification une fois l'icône trouvée
+                clearInterval(checkWhatsAppIcon);
+
+                // Ajoutez un gestionnaire de scroll
+                window.addEventListener("scroll", function () {
+                    if (window.scrollY > 50) {
+                        whatsappIcon.style.opacity = "1";
+                        whatsappIcon.style.visibility = "visible";
+                    } else {
+                        whatsappIcon.style.opacity = "0";
+                        whatsappIcon.style.visibility = "hidden";
+                    }
+                });
+
+                // Style initial : caché
+                whatsappIcon.style.opacity = "0";
+                whatsappIcon.style.visibility = "hidden";
+                whatsappIcon.style.transition = "opacity 0.3s ease, visibility 0.3s ease";
+            }
+        }, 100); // Vérifie toutes les 100ms
+    });
+
+
+    
 
 
     </script>
-    
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-514af7ee-7388-4eb1-98ca-dec5cf5c476c" data-elfsight-app-lazy></div>
+
 </body>
 </html>
