@@ -558,7 +558,6 @@ a:hover {
     width: 50%; /* Largeur du texte */
     padding-left: 20px; /* Optionnel : ajouter un peu d'espace entre l'image et le texte */
     margin: auto;
-    outline: 2px solid red;
 }
 
 .textXpOne h1 {
@@ -583,7 +582,6 @@ a:hover {
     width: 50%; /* Largeur du texte */
     padding-left: 20px; /* Ajouter un espace entre le texte et l'image */
     margin: auto;
-    outline: 2px solid red;
     margin-right: 10px;
 
 }
@@ -728,13 +726,11 @@ a:hover {
 
 .containerImgXpOne{
     width: 50%;
-    outline: 2px solid red;
     
 }
 
 .containerImgXpTwo{
     width: 50%;
-    outline: 2px solid red;
 
 }
 
@@ -1036,6 +1032,13 @@ input:focus {
 
 /* Affichage du menu burger en mode mobile */
 @media (max-width: 768px) and (max-width: 1024px) {
+
+    .myImg{
+      margin-top: 100px;
+
+    }
+
+
     .burger {
         display: block;
     }
@@ -1098,6 +1101,7 @@ input:focus {
         flex-direction: column; /* Passe la disposition en colonne */
         align-items: center; /* Centre les éléments horizontalement */
         text-align: center; /* Centre le texte */
+        
     }
 
     .myImgContenair {
@@ -1106,7 +1110,7 @@ input:focus {
     }
 
     .myDescription {
-        margin-top: 15px; /* Ajoute un espace au-dessus du texte */
+        margin-top: 150px; /* Ajoute un espace au-dessus du texte */
     }
 
     
