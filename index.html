@@ -203,9 +203,9 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
                     <h1 class="TitleSection">Expérience</h1>
                 </div>
             </div>
-
+<!-- 
             <div class="containerXp ">
-                <div class="">
+                <div class="containerImgXpOne">
                     <img class="nasaImgcss imgXpOne " src="img/chapsVision.jpg" alt="">
                 </div>
                 <div class="textXpOneTablette textXpOne ">
@@ -224,7 +224,10 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
                         En tant que cheffe de projet, j'ai assuré la gestion de projets en élaborant des plannings détaillés, en réalisant des présentations claires des projets, et en concevant des maquettes ainsi que des spécifications techniques précises pour décrire les fonctionnalités et les différentes étapes. J'ai également conçu, développé, mis en ligne et assuré la maintenance de plusieurs sites web internes à l'entreprise, garantissant leur performance et leur adéquation aux besoins internes.
                     </p>
                 </div>
-                <img class="imgXpTwo" src="img/ENEDIS.jpg" alt="Badge">
+                <div class="containerImgXpTwo">
+                    <img class="imgXpTwo" src="img/ENEDIS.jpg" alt="Badge">
+
+                </div>
             </div>
 
             <div class="containerXp ">
@@ -247,7 +250,124 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
                     </p>
                 </div>
                 <img class="imgXpTwo" src="img/ministere.jpg" alt="Badge">
-            </div>
+            </div> -->
+
+
+            <div class="experience-section">
+                <div class="experience-card">
+                  <div class="experience-card-image">
+                    <img src="img/chapsVision.jpg" alt="ChapsVision">
+                  </div>
+                  <div class="experience-card-content">
+                    <h1>Consultant CRM / chef de projet</h1>
+                    <h2>ChapsVision</h2>
+                    <p>
+                      Personnalisation et intégration de solutions CRM pour des clients tels qu'Allianz, Bricot Dépôt et Krys, incluant le développement de fonctionnalités sur mesure, la rédaction de spécifications, et la participation à des réunions clés pour garantir la qualité des livrables.
+                    </p>
+                  </div>
+                </div>
+              
+                <div class="experience-card">
+                  <div class="experience-card-image">
+                    <img src="img/ENEDIS.jpg" alt="Enedis">
+                  </div>
+                  <div class="experience-card-content">
+                    <h1>Apprenti Développeur web Fullstack et Chef de projets</h1>
+                    <h2>Enedis</h2>
+                    <p>
+                      Gestion de projets, création de maquettes et spécifications techniques, et développement de sites web internes, garantissant leur performance et leur adéquation aux besoins de l'entreprise.
+                    </p>
+                  </div>
+                </div>
+              
+                <div class="experience-card">
+                  <div class="experience-card-image">
+                    <img src="img/Ministere_de_l'Economie_et_des_Finance_-_Paris,_France_-_panoramio.jpg" alt="Ministère de l'Économie et des Finances">
+                  </div>
+                  <div class="experience-card-content">
+                    <h1>Apprenti développeur web Full stack</h1>
+                    <h2>Ministère de l'Économie et des Finances</h2>
+                    <p>
+                      Conception et développement de sites web en HTML/CSS et C# (ASP.NET), création et gestion d'API, tout en respectant les bonnes pratiques et les exigences des projets.
+                    </p>
+                  </div>
+                </div>
+              
+                <div class="experience-card">
+                  <div class="experience-card-image">
+                    <img src="img/ministere.jpg" alt="Ministère de l'Économie et des Finances">
+                  </div>
+                  <div class="experience-card-content">
+                    <h1>Apprenti développeur web Frontend</h1>
+                    <h2>Ministère de l'Économie et des Finances</h2>
+                    <p>
+                      Assistance au lead développeur pour la conception, le développement et la maintenance d'applications web intuitives et adaptées aux besoins des agents du ministère, conformes aux exigences techniques.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <style>
+              .experience-section {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 40px;
+                justify-content: center;
+                margin: 20px;
+                margin-top: 5%;
+              }
+              
+              .experience-card {
+                position: relative;
+                width: 300px;
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+              }
+              
+              .experience-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+              }
+              
+              .experience-card-image img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+              }
+              
+              .experience-card-content {
+                padding: 15px;
+                color: #333;
+                text-align: left;
+              }
+              
+              .experience-card-content h1 {
+                font-size: 1.5em;
+                margin-bottom: 5px;
+                color: #ffffff;
+              }
+              
+              .experience-card-content h2 {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+                color: #ffffff;
+                margin-top: 25px;
+                margin-bottom: 25px;
+
+              }
+              
+              .experience-card-content p {
+                font-size: 0.9em;
+                line-height: 1.5;
+                color: #ffffff;
+              }
+              </style>
+              
+
             
         
             <div id="cursus" class="imgTransitionTwo">
@@ -262,7 +382,7 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
                         <p class="">
                             octobre 2022 à octobre 2023 -
                             L'Ecole Multimédia
-                            Bac+5 (RITD) Responsable Inovation et Transition Digital</p>
+                            Bac+5 (RITD) Responsable Innovation et Transition Digital</p>
                     </div>
                 </div>
             

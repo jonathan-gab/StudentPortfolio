@@ -507,6 +507,7 @@ a:hover {
     width: 50%; /* Largeur du texte */
     padding-left: 20px; /* Optionnel : ajouter un peu d'espace entre l'image et le texte */
     margin: auto;
+    outline: 2px solid red;
 }
 
 .textXpOne h1 {
@@ -531,6 +532,9 @@ a:hover {
     width: 50%; /* Largeur du texte */
     padding-left: 20px; /* Ajouter un espace entre le texte et l'image */
     margin: auto;
+    outline: 2px solid red;
+    margin-right: 10px;
+
 }
 
 .textXpTwo h1 {
@@ -538,11 +542,108 @@ a:hover {
     text-align: center;
 }
 
-.imgXpOne, .imgXpTwo {
-    width: 580px; /* Largeur fixe */
-    height: 300px; /* Hauteur fixe */
-    object-fit: cover; /* S'assure que l'image s'adapte bien */
+
+
+
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 40px 0;
+    color: #fff;
 }
+
+/* Experience Grid */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Experience Card */
+.experience-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Card Image */
+.experience-image-wrapper {
+    overflow: hidden;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.experience-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.experience-card:hover .experience-image {
+    transform: scale(1.1);
+}
+
+/* Card Content */
+.experience-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.experience-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.experience-content h3 {
+    font-size: 1.2em;
+    color: #ccc;
+    margin: 10px 0;
+}
+
+.experience-content p {
+    font-size: 1em;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-content h2 {
+        font-size: 1.3em;
+    }
+
+    .experience-content h3 {
+        font-size: 1.1em;
+    }
+
+    .experience-content p {
+        font-size: 0.9em;
+    }
+}
+
+
+
 
 .cursusContainer {
     margin: auto;
@@ -573,9 +674,22 @@ a:hover {
     text-align: justify; /* Justifie le texte pour un rendu plus propre */
 }
 
+
+.containerImgXpOne{
+    width: 50%;
+    outline: 2px solid red;
+    
+}
+
+.containerImgXpTwo{
+    width: 50%;
+    outline: 2px solid red;
+
+}
+
 .nasaImgcss {
+    width: 100%;
     transition: transform 0.5s ease-in-out;
-    margin-left: 80px;
 }
 
 .nasaImgcss:active {
@@ -583,8 +697,8 @@ a:hover {
 }
 
 .imgXpTwo{
+    width: 100%;
     transition: transform 0.5s ease-in-out;
-    margin-right: 80px;
 
 
 }
@@ -935,6 +1049,7 @@ input:focus {
         margin-top: 15px; /* Ajoute un espace au-dessus du texte */
     }
 
+    
 
     .containerXp, .containerXpTwo {
         flex-direction: column; /* Change l'orientation des éléments pour une disposition en colonne */
@@ -1016,7 +1131,7 @@ input:focus {
     }
 
     .nasaImgcss{
-        width: 95%;
+        width: 100%;
     }
 
     .lokiCss{
@@ -1037,7 +1152,7 @@ input:focus {
 }
 
 .textXpOneTablette{
-    width:650%;
+    width:50%;
     margin-right: 50px
 }
 
