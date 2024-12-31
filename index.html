@@ -59,10 +59,22 @@
     <main>
         <div class="chiefContainer">
             <div class="myDescriptionContainer ">
-                <div class=" myImgContenair ">
-                    <img class="myImg" src="img/moi.jpeg" alt="">
 
+                <div class="myImgContenair">
+                    <img class="myImg" src="img/moi.jpeg" alt="Cliquez ici" onclick="openModalGame()">
                 </div>
+                
+                <!-- Modal -->
+                <div id="myModalGame" class="modalGame">
+                    <div class="modal-contentGame">
+                        <span class="closeGame" onclick="closeModalGame()">&times;</span>
+                        <iframe class="game" id="game" src = "https://microstudio.io/HomineLudens/marblequest/"></iframe>
+
+                    </div>
+                </div>
+                
+                
+                
                 <div class="myDescription  ">
                     <p>
                         
@@ -658,8 +670,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 100); // Vérifie toutes les 100ms
     });
 
-
+  
     
+    function openModalGame() {
+    const modal = document.getElementById("myModalGame");
+    const iframe = document.getElementById("game");
+
+    // Réinitialise le contenu de l'iframe
+    iframe.src = "https://microstudio.io/HomineLudens/marblequest/";
+
+    // Affiche le modal
+    modal.style.display = "block";
+}
+
+function closeModalGame() {
+    const modal = document.getElementById("myModalGame");
+    const iframe = document.getElementById("game");
+
+    // Cache le modal
+    modal.style.display = "none";
+
+    // "Tue" l'iframe en réinitialisant sa source
+    iframe.src = "";
+}
+
+
+
 
 
     </script>
