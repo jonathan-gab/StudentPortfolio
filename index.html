@@ -27,6 +27,8 @@
                 </label>
         
                 <ul class="navList menu">
+                    <li><a class="navBt" href="#skills">Skills</a></li>
+                    <li><a class="navBt" href="#projets">Projets</a></li>
                     <li><a class="navBt" href="#experiences">Expériences</a></li>
                     <li><a class="navBt" href="#cursus">Cursus</a></li>
                     <li><a class="navBt" href="#contact">Contact</a></li>
@@ -79,7 +81,7 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
             </div>
 
 
-            <div id="experiences" class="imgTransitionZero">
+            <div id="skills" class="imgTransitionZero">
                 <div class="xpTitleContainer">
                     <h1 class="TitleSection">Skills</h1>
                 </div>
@@ -137,7 +139,7 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
             </div>
 
 
-            <div id="experiences" class="imgTransitionProjets">
+            <div id="projets" class="imgTransitionProjets">
                 <div class="xpTitleContainer">
                     <h1 class="TitleSection">Projets</h1>
                 </div>
@@ -184,7 +186,7 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
                 </div>
                 
                 <!-- Modal Template -->
-                <div class="modal" id="modal">
+                <div onclick="closeModalOnOutsideClick(event)" class="modal" id="modal">
                     <div class="modal-content">
                         <button class="close-btn" onclick="closeModal()">&times;</button>
                         <h2 class="modal-title" id="modal-title">Modal Title</h2>
@@ -204,7 +206,7 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
 
             <div class="containerXp ">
                 <div class="">
-                    <img class="nasaImgcss imgXpOne " src="img/badge.jpg" alt="">
+                    <img class="nasaImgcss imgXpOne " src="img/chapsVision.jpg" alt="">
                 </div>
                 <div class="textXpOneTablette textXpOne ">
                     <h1>Consultant CRM / chef de projet - ChapsVision</h1>
@@ -222,12 +224,12 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
                         En tant que cheffe de projet, j'ai assuré la gestion de projets en élaborant des plannings détaillés, en réalisant des présentations claires des projets, et en concevant des maquettes ainsi que des spécifications techniques précises pour décrire les fonctionnalités et les différentes étapes. J'ai également conçu, développé, mis en ligne et assuré la maintenance de plusieurs sites web internes à l'entreprise, garantissant leur performance et leur adéquation aux besoins internes.
                     </p>
                 </div>
-                <img class="imgXpTwo" src="img/iss.jpg" alt="Badge">
+                <img class="imgXpTwo" src="img/ENEDIS.jpg" alt="Badge">
             </div>
 
             <div class="containerXp ">
                 <div class="">
-                    <img class="lokiCss imgXpOne " src="img/loki.jpg" alt="">
+                    <img class="lokiCss imgXpOne " src="img/Ministere_de_l'Economie_et_des_Finance_-_Paris,_France_-_panoramio.jpg"">
                 </div>
                 <div class="textXpOne ">
                     <h1>Apprenti développeur web Full stack - Ministère de l'Économie et des Finances</h1>
@@ -244,7 +246,7 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
                         J'ai assisté le lead développeur dans la conception, le développement et la maintenance d'applications web, en veillant à respecter les modalités strictes de production propres à ces projets. Mon travail s'est concentré sur la création de solutions utilisables et intuitives, adaptées aux besoins spécifiques des agents du ministère, tout en garantissant leur conformité avec les exigences techniques et fonctionnelles.
                     </p>
                 </div>
-                <img class="imgXpTwo" src="img/iss.jpg" alt="Badge">
+                <img class="imgXpTwo" src="img/ministere.jpg" alt="Badge">
             </div>
             
         
@@ -255,41 +257,57 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
             </div>
             <div class=" cursusContainer">
                 <div class=" cursus">
-                    <img class=" cursusImgOne" src="img/bulbi.jpg" alt="Description de l'image">
+                    <img class=" cursusImgOne" src="img/em.jpg" alt="Description de l'image">
                     <div class="CursusTextOne">
-                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam...</p>
+                        <p class="">
+                            octobre 2022 à octobre 2023 -
+                            L'Ecole Multimédia
+                            Bac+5 (RITD) Responsable Inovation et Transition Digital</p>
                     </div>
                 </div>
             
                 <!-- Bloc 2 : Texte à gauche, image à droite -->
                 <div class=" cursus reverse">
                     <div class="CursusTextOne">
-                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor...</p>
+                        <p class="">
+                            Septembre 2021 à octobre 2022 -
+                            L'Ecole Multimédia
+                            Bac+4 Développeur Full Stack
+                        </p>
                     </div>
-                    <img class=" cursusImgOne" src="img/bulbi.jpg" alt="Description de l'image">
+                    <img class=" cursusImgOne" src="img/em.jpg" alt="Description de l'image">
                 </div>
             
                 <!-- Bloc 3 : Image à gauche, texte à droite -->
                 <div class=" cursus">
-                    <img class=" cursusImgOne" src="img/bulbi.jpg" alt="Description de l'image">
+                    <img class=" cursusImgOne" src="img/em.jpg" alt="Description de l'image">
                     <div class="CursusTextOne">
-                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor...</p>
+                        <p class="">Septembre 2020 à octobre 2021 -
+                            L'Ecole Multimédia
+                            Bachelor développeur Web front-end en alterance
+                         </p>
                     </div>
                 </div>
             
                 <!-- Bloc 4 : Texte à gauche, image à droite -->
                 <div class=" cursus reverse">
                     <div class="CursusTextOne">
-                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor...</p>
+                        <p class="">Septembre 2018 à septembre 2020 -
+                            IUT Sorbonne Paris Nord
+                            DUT Informatique
+                        </p>
                     </div>
-                    <img class=" cursusImgOne" src="img/bulbi.jpg" alt="Description de l'image">
+                    <img class=" cursusImgOne" src="img/iut.png" alt="Description de l'image">
                 </div>
             
                 <!-- Bloc 5 : Image à gauche, texte à droite -->
                 <div class=" cursus">
-                    <img class=" cursusImgOne" src="img/bulbi.jpg" alt="Description de l'image">
+                    <img class=" cursusImgOne" src="img/jrr.png" alt="Description de l'image">
                     <div class="CursusTextOne">
-                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor...</p>
+                        <p class="">Septembre 2015 à juillet 2018 -
+                            Lycée Jean Jacques Rousseau
+                            Terminal Scientifique spécialisation SVT
+                        </p>
                     </div>
                 </div>
             </div>
@@ -302,7 +320,9 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
 
             <div class="contact">
                 <div class="imgForMap ">
-                    <img class="map" src="img/map.jpg" alt="">
+
+    <div class="mapswrapper"><iframe width="100%" height="650" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Paris&zoom=10&maptype=roadmap"></iframe><a href="https://fnfmods.net/week-8/">fnf week 8</a><style>.mapswrapper{background:#fff;position:relative}.mapswrapper iframe{border:0;position:relative;z-index:2}.mapswrapper a{color:rgba(0,0,0,0);position:absolute;left:0;top:0;z-index:0}</style>
+    </div>
 
                 </div>
                 <div class="formContainer">
@@ -365,34 +385,36 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
 
     const cardsData = [
         {
-            title: 'Card Title 1',
-            image: 'https://via.placeholder.com/200x150',
-            description: 'This is the description for Card 1.'
+            title: 'LETFLIX',
+            image: './img/logoletflix.png',
+            description: "Durant ma deuxième année de DUT, j'ai eu pour projet de développer une application mobile sous android studio. L'objectif était de développer une application mobile qui répondent à un problème. J'ai donc imaginé LETFLIX. Cette application à pour but de régler un problème qu'entent qu'uilisateur de Netflix j'ai souvent rencontré. En effet, lorsque j'utilise Netflix je me suis rendu compte que moi et beaucoup d'autres utilisateurs, passons généralement beaucoup plus de temps à chercher un programme plutôt qu'a en regardé. LETFLIX (LET pour laisser car la doctrine de mon application est Laisser LETFLIX choisir pour vous) est donc un générateur aléatoire des programmes présents sur Netflix. Différents thèmes sont présent et les utilisateurs peuvent choisir un programme au hasard parmis ces thèmes."
         },
         {
-            title: 'Card Title 2',
-            image: 'https://via.placeholder.com/200x150',
-            description: 'This is the description for Card 2.'
+            title: 'DNA SPORT',
+            image: './img/dnasports.png',
+            description: "Lors de mon stage à la fin de la deuxième année de DUT, j'ai effectué un stage de deux mois au sein de l'entreprise DNA GA. J'ai développé cette page vitrine en HTML / CSS. Elle visait à présenter l'une des solutions proposées par l'entreprise."
         },
         {
-            title: 'Card Title 3',
-            image: 'https://via.placeholder.com/200x150',
-            description: 'This is the description for Card 3.'
+            title: 'DNA VALUE',
+            image: './img/dnavalue.png',
+            description: "Durant mon stage de fin de deuxième année de DUT, j'ai effectué un stage de deux mois au seins de l'entreprise DNA GA. J'ai développé cette page vitrine en ReactJs et HTML/CSS. Elle avait pour but de présenté l'une des solution que propose l'entreprise."
         },
         {
-            title: 'Card Title 4',
-            image: 'https://via.placeholder.com/200x150',
-            description: 'This is the description for Card 4.'
+            title: 'Bug Tracker',
+            image: "./img/bugtracker.png",
+            description: "Projet effectué lors de mon bac+4 développeur web Fullstack. La mission consistait en la récupération et l'utilisation d'une API et la création d'une application web qui répertoriait les tikets de résolution de bug crée par les utilisateurs. Je devais pouvoir créer un bug, le modifier et le supprimer. Je devais aussi pouvoir me créer un compte, me connecter et me déconnecter de l'application."
         },
         {
-            title: 'Card Title 5',
-            image: 'https://via.placeholder.com/200x150',
-            description: 'This is the description for Card 5.'
+            title: 'Cantina',
+            image: './img/cantina.png',
+            description: "Projet final de mon année de Bachelor développeur web Frontend. La mission consistait à récupérer et à utiliser une API qui contenait diverses informations de recette en rapport avec l'univers d'Harry Potter. Je devait pouvoir créer, consulter, modifier et supprimer une recette."
         },
         {
-            title: 'Card Title 6',
-            image: 'https://via.placeholder.com/200x150',
-            description: 'This is the description for Card 6.'
+            title: 'Paris Event',
+            image: './img/parisevent.png',
+            description: "Projet effectué lors de mon année de Bachelor développeur web Frontend. Le projet consistait en la récupération et l'utilisation d'une API qui répertorie les événements qui ont lieu sur Paris. Je devais pouvoir consulter les événements, les trier via une barre de recherche et les mettre en favoris."
+
+
         }
     ];
 
@@ -407,6 +429,86 @@ Mon ambition est de faire prospérer mon entreprise et de travailler sur un maxi
     function closeModal() {
         modal.style.display = 'none';
     }
+
+    function closeModalOnOutsideClick(event) {
+    const modalContent = document.querySelector('.modal-content');
+    if (!modalContent.contains(event.target)) { // Vérifie si le clic est à l'extérieur du contenu
+        closeModal();
+    }
+}
+
+
+document.getElementById('contactForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+
+        const response = await fetch('http://localhost:3000/send-email', {
+            method: 'POST',
+            body: JSON.stringify(Object.fromEntries(formData)),
+            headers: { 'Content-Type': 'application/json' }
+        });
+
+        if (response.ok) {
+            alert('Votre message a été envoyé avec succès.');
+        } else {
+            alert('Une erreur est survenue lors de l\'envoi de votre message.');
+        }
+    });
+
+
+
+    const express = require('express');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+const cors = require('cors');
+
+const app = express();
+
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
+
+// POST route for sending emails
+app.post('/send-email', async (req, res) => {
+    const { nom, prenom, email, message } = req.body;
+
+    if (!nom || !prenom || !email || !message) {
+        return res.status(400).send('Tous les champs sont obligatoires.');
+    }
+
+    // Configurer le transporteur Nodemailer
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'jonathan.charlet.pro@gmail.com',
+            pass: 'VOTRE_MOT_DE_PASSE_APPLI' // Utilisez un mot de passe d'application pour Gmail
+        }
+    });
+
+    const mailOptions = {
+        from: email,
+        to: 'jonathan.charlet.pro@gmail.com',
+        subject: `Message de ${prenom} ${nom}`,
+        text: `Nom: ${nom}\nPrenom: ${prenom}\nEmail: ${email}\n\nMessage:\n${message}`
+    };
+
+    try {
+        await transporter.sendMail(mailOptions);
+        res.status(200).send('Email envoyé avec succès.');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Erreur lors de l\'envoi de l\'email.');
+    }
+});
+
+// Démarrer le serveur
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Serveur en cours d'exécution sur le port ${PORT}`);
+});
+
+
 
     </script>
     
