@@ -234,7 +234,7 @@ a:hover {
 }
 
 .chiefContainer{
-    padding-top: 5%;
+    padding-top: 3%;
     align-items: center; /* Aligne verticalement l'image et la description */
     justify-content: center; /* Centre le tout horizontalement */
 
@@ -254,6 +254,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     background-color: transparent; /* Ajoutez un fond transparent si besoin */
+    padding-left: 4%;
 }
 
 .myImg {
@@ -320,7 +321,7 @@ a:hover {
     background-position: 10% 12%; /* Ajustez cette valeur pour afficher une autre partie de l'image */
     width: 100%;
     padding: 5%;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 
@@ -440,6 +441,10 @@ a:hover {
 
 /* Carousel */
 
+.containerSkills{
+    
+}
+
 .carousel-container {
     width: 100%;
     overflow: hidden;
@@ -451,6 +456,7 @@ a:hover {
 .carousel {
     display: flex;
     animation: scroll 10s linear infinite;
+
 }
 
 .carousel img {
@@ -480,7 +486,7 @@ a:hover {
     background-size: cover;
     width: 100%;
     padding: 5%;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 /* Pseudo-élément pour le filtre */
@@ -515,7 +521,7 @@ a:hover {
     background-size: cover;
     width: 100%;
     padding: 5%;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 /* Pseudo-élément pour le filtre */
